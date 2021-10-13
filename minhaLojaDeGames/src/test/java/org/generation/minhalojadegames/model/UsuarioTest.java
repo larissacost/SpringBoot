@@ -1,4 +1,4 @@
-package org.generation.blogpessoal.model;
+package org.generation.minhalojadegames.model;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;

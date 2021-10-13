@@ -34,12 +34,16 @@ public class Produto {
 	
 	@Positive
 	@Digits(integer = 4 ,fraction = 2,message = "O preço aceita só 2 casa depois da virgula por padrão da moeda Real")
-	private BigDecimal preço;
+	private BigDecimal preco;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
 
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
+	private Usuario usuario;
+	
 	public long getId() {
 		return id;
 	}
@@ -64,12 +68,12 @@ public class Produto {
 		this.qtd_de_produto = qtd_de_produto;
 	}
 
-	public BigDecimal getPreço() {
-		return preço;
+	public BigDecimal getPreco() {
+		return preco;
 	}
 
-	public void setPreço(BigDecimal preço) {
-		this.preço = preço;
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
 	}
 
 	public Categoria getCategoria() {
@@ -79,6 +83,14 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
-	
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
 
 }
